@@ -1094,8 +1094,110 @@ ul, ol {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-shrink: 0;
+}
+
+/* Header Quick Contact Icons (WhatsApp & Email) */
+.header-quick-contacts {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-contact-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 23px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 3px 10px rgba(99, 39, 19, 0.09);
+  border: 1px solid rgba(139, 69, 19, 0.14);
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.header-whatsapp-btn {
+  color: #25D366;
+}
+
+.header-whatsapp-btn:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+.header-email-btn {
+  color: #EA4335;
+}
+
+.header-email-btn:hover {
+  background-color: #EA4335;
+  border-color: #EA4335;
+  color: #FFFFFF;
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(234, 67, 53, 0.35);
+}
+
+.header-contact-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+/* Mobile Drawer Quick Contacts */
+.mobile-quick-contacts {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.mobile-contact-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(139, 69, 19, 0.12);
+  background-color: #FFFFFF;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(99, 39, 19, 0.06);
+}
+
+.mobile-contact-btn i {
+  font-size: 17px;
+}
+
+.mobile-whatsapp-btn {
+  color: #25D366;
+}
+
+.mobile-whatsapp-btn:active,
+.mobile-whatsapp-btn:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.mobile-email-btn {
+  color: #EA4335;
+}
+
+.mobile-email-btn:active,
+.mobile-email-btn:hover {
+  background-color: #EA4335;
+  border-color: #EA4335;
+  color: #FFFFFF;
 }
 
 .nav-cta {
@@ -2856,46 +2958,31 @@ ul, ol {
   }
 
 @media (max-width: 900px) {
+  .core-values-wings,
+  .title-framing-paw {
+    display: none !important;
   }
+}
 
 @media (max-width: 768px) {
-  .wing-heart-left,
-  .wing-heart-right,
-  .wing-paw-left,
-  .wing-paw-right,
-  .paw-title-mid-left,
-  .paw-title-bottom-right {
-    display: none;
+  .core-values-wings,
+  .title-framing-paw {
+    display: none !important;
   }
-  .paw-title-top-left {
-    left: 4%;
-    top: -6px;
-    transform: scale(0.8) rotate(16deg);
+
+  .core-values-section {
+    padding: 60px 0 70px;
   }
-  .paw-title-top-right {
-    right: 4%;
-    top: 0px;
-    transform: scale(0.8) rotate(-22deg);
+
+  .core-values-header {
+    margin-bottom: 36px;
+    padding: 0 16px;
   }
-  .wing-squiggle-left {
-    left: 2%;
-    top: 20px;
-    transform: scale(0.7);
-  }
-  .wing-squiggle-right {
-    right: 2%;
-    top: 20px;
-    transform: scaleX(-1) scale(0.7);
-  }
-  .wing-star-left-top {
-    left: 18%;
-    top: 15px;
-    transform: scale(0.75);
-  }
-  .wing-star-right-top {
-    right: 18%;
-    top: 15px;
-    transform: scale(0.75);
+
+  .core-values-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 14px;
   }
 }
 
@@ -4032,6 +4119,16 @@ ul, ol {
     display: none;
   }
 
+  .header-actions {
+    gap: 12px;
+  }
+
+  .header-contact-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+
   .logo-img {
     height: 84px;
   }
@@ -4238,6 +4335,16 @@ ul, ol {
   :root {
     --header-height: 94px;
     --header-height-scrolled: 76px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-contact-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
   }
 
   .desktop-br {
